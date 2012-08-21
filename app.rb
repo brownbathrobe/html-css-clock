@@ -2,15 +2,15 @@ require "sinatra"
 require "shotgun"
 
 get "/" do
-  time = Time.now
-  @hours = time.hour  > 11 ? time.hour - 12 : time.hour
-  @mins = time.min
-  @secs = time.sec
+  time   = Time.now
 
-  @hours = 100
-  @mins = 200
-  @secs = 300
+  hours  = time.hour > 11 ? time.hour - 12 : time.hour
+  mins   = time.min
+  secs   = time.sec
+  @secs  = secs #(360/60)
+  @mins  = (mins * 60.0 + secs) / 3600 * 360
+  @hours = (hours * 3600.0 + mins * 60 + secs) / 43200 * 360
+
   puts "#{@hours}:#{@mins}:#{@secs}"
   erb :index
-  # File.read('index.html')
 end

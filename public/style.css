@@ -133,17 +133,17 @@ body {
 #seconds {
   /*display: none;*/
   background-color: rgba(255, 0, 0, .1);
-  -webkit-animation: seconds-rotating 6s linear infinite;
+  -webkit-animation: seconds-rotating 60s linear infinite;
 }
 
 #minutes {
   background-color: rgba(255, 0, 0, .1);
-  -webkit-animation: minutes-rotating 360s linear infinite;
+  -webkit-animation: minutes-rotating 3600s linear infinite;
 }
 
 #hours {
   background-color: rgba(0, 0, 255, .1);
-  -webkit-animation: hours-rotating 4320s linear infinite;
+  -webkit-animation: hours-rotating 43200s linear infinite;
 }
 
 .left {
