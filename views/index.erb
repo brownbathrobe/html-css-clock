@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML/CSS CLOCK</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400' rel='stylesheet' type='text/css'>
+    <style>
+      @-webkit-keyframes seconds-rotating {
+        from{ -webkit-transform: rotate(<%= @secs %>deg); }
+        to{ -webkit-transform: rotate(<%= @secs + 360 %>deg); }
+      }
+      @-webkit-keyframes minutes-rotating {
+        from{ -webkit-transform: rotate(<%= @mins %>deg); }
+        to{ -webkit-transform: rotate(<%= @mins + 360 %>deg);}
+      }
+      @-webkit-keyframes hours-rotating {
+        from{ -webkit-transform: rotate(<%= @hours %>deg); }
+        to{ -webkit-transform: rotate(<%= @hours + 360 %>deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="outer">
+        <div id="numbers">
+          <span class="XII">12</span>
+          <span class="I">1</span>
+          <span class="II">2</span>
+          <span class="III">3</span>
+          <span class="IV">4</span>
+          <span class="V">5</span>
+          <span class="VI">6</span>
+          <span class="VII">7</span>
+          <span class="VIII">8</span>
+          <span class="IX">9</span>
+          <span class="X">10</span>
+          <span class="XI">11</span>
+        </div>
+        <div id="seconds">
+          <div class="left"></div><div class="right"></div>
+        </div>
+        <div id="minutes">
+          <div class="left"></div><div class="right"></div>
+        </div>
+        <div id="hours">
+          <div class="left"></div><div class="right"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
