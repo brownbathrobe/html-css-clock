@@ -5,17 +5,46 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400' rel='stylesheet' type='text/css'>
     <style>
+      /* seconds */
       @-webkit-keyframes seconds-rotating {
         from{ -webkit-transform: rotate(<%= @secs %>deg); }
         to{ -webkit-transform: rotate(<%= @secs + 360 %>deg); }
       }
+      @-moz-keyframes seconds-rotating {
+        from{ -moz-transform: rotate(<%= @secs %>deg); }
+        to{ -moz-transform: rotate(<%= @secs + 360 %>deg); }
+      }
+      @-o-keyframes seconds-rotating {
+        from{ -o-transform: rotate(<%= @secs %>deg); }
+        to{ -o-transform: rotate(<%= @secs + 360 %>deg); }
+      }
+
+      /* minutes */
       @-webkit-keyframes minutes-rotating {
         from{ -webkit-transform: rotate(<%= @mins %>deg); }
         to{ -webkit-transform: rotate(<%= @mins + 360 %>deg);}
       }
+      @-moz-keyframes minutes-rotating {
+        from{ -moz-transform: rotate(<%= @mins %>deg); }
+        to{ -moz-transform: rotate(<%= @mins + 360 %>deg);}
+      }
+      @-o-keyframes minutes-rotating {
+        from{ -o-transform: rotate(<%= @mins %>deg); }
+        to{ -o-transform: rotate(<%= @mins + 360 %>deg);}
+      }
+
+      /* hours */
       @-webkit-keyframes hours-rotating {
         from{ -webkit-transform: rotate(<%= @hours %>deg); }
         to{ -webkit-transform: rotate(<%= @hours + 360 %>deg); }
+      }
+      @-moz-keyframes hours-rotating {
+        from{ -moz-transform: rotate(<%= @hours %>deg); }
+        to{ -moz-transform: rotate(<%= @hours + 360 %>deg); }
+      }
+      @-o-keyframes hours-rotating {
+        from{ -o-transform: rotate(<%= @hours %>deg); }
+        to{ -o-transform: rotate(<%= @hours + 360 %>deg); }
       }
     </style>
   </head>
@@ -26,13 +55,13 @@
           <%= yield %>
         </div>
         <div id="seconds">
-          <div class="left"></div><div class="right"></div>
+          <div class="hand"></div>
         </div>
         <div id="minutes">
-          <div class="left"></div><div class="right"></div>
+          <div class="hand"></div>
         </div>
         <div id="hours">
-          <div class="left"></div><div class="right"></div>
+          <div class="hand"></div>
         </div>
       </div>
     </div>
