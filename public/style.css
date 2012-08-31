@@ -15,12 +15,11 @@ body {
 #outer {
   width: 100%;
   height: 100%;
-  /*border: 15px double rgba(255, 0, 100, .9);*/
-  border: 5px solid rgba(255, 0, 100, .3);
+  border: 15px solid rgba(255, 0, 100, .15);
   border-radius: 1000px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(255, 255, 255, .9), 0 0 30px white, 0 0 3px white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, .3), 0 0 30px rgba(255, 255, 255, .3), 0 0 30px rgba(255, 255, 255, .3);
 }
 
 #numbers {
@@ -40,7 +39,7 @@ body {
   text-align: center;
   position: absolute;
   color: white;
-  text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 30px white;
+  text-shadow: 0 0 15px white, 0 0 3px white, 0 0 3px white, 0 0 30px white;
 }
 
 
@@ -170,78 +169,85 @@ body {
   margin-top: 5%;
 }
 
+#seconds > div {
+  width: 8px;
+}
+
 #hours > div {
-  height: 38%;
-  margin-top: 13%;
+  height: 35%;
+  margin-top: 16%;
+  width: 20px;
+
 }
 
 #minutes > div {
   height: 44%;
   margin-top: 7%;
+  width: 20px;
 }
 
 #seconds {
-  /*display: none;*/
   background-color: rgba(255, 0, 0, .1);
   -webkit-animation: seconds-rotating 60s linear infinite;
+  -moz-animation: seconds-rotating 60s linear infinite;
+  -o-animation: seconds-rotating 60s linear infinite;
 }
 
 #minutes {
   background-color: rgba(255, 0, 0, .1);
   -webkit-animation: minutes-rotating 3600s linear infinite;
+  -moz-animation: minutes-rotating 3600s linear infinite;
+  -o-animation: minutes-rotating 3600s linear infinite;
 }
 
 #hours {
   background-color: rgba(0, 0, 255, .1);
   -webkit-animation: hours-rotating 43200s linear infinite;
+  -moz-animation: hours-rotating 43200s linear infinite;
+  -o-animation: hours-rotating 43200s linear infinite;
 }
 
-.left {
-  border-right: 10px solid rgba(255, 0, 100, 1);
+.hand {
+  background-color: rgba(255, 255, 255, .3);
+  box-shadow: 0px -2px 30px 0px rgba(255, 255, 255, .3);
 }
 
-.right {
-  border-left: 10px solid rgba(255, 0, 100, .4);
-}
 
-#seconds > .right, #seconds > .left {
+#seconds > .hand {
   border-width: 3px;
 }
 
-.left:after {
+.hand:before, .hand:after {
   content: "";
   position: relative;
-  top: -8%;
   bottom: auto;
-  left: 20px;
+  left: 0px;
   right: auto;
   border-width: 0px 10px 15px 10px;
   border-style: solid;
-  border-color: rgba(255, 0, 100, 1) transparent;
+  border-color: rgba(255, 255, 255, .15) transparent;
   display: block;
   width: 0;
 }
 
-.right:before {
-  content: "";
-  position: relative;
-  top: -8%;
-  bottom: auto;
-  left: auto;
-  right: 20px;
-  border-width: 0px 10px 15px 10px;
-  border-style: solid;
-  border-color: rgba(255, 0, 100, .2) transparent;
-  display: block;
-  width: 0;
-}
-
-#seconds > .left:after, #seconds > .right:before {
+#seconds > .hand:before, #seconds > .hand:after {
   display: none;
 }
 
-#minutes > .left:after, #minutes > .right:before {
-  top: -7%;
+#minutes > .hand:before {
+  top: -7.5%;
+}
+
+#minutes > .hand:after {
+  top: -13.5%;
+}
+
+#hours > .hand:before {
+  top: -9%;
+}
+
+#hours > .hand:after {
+  top: -17%;
 }
 
 /* TODO: figure this out

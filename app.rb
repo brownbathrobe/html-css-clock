@@ -19,6 +19,6 @@ get "/" do
   @mins = (mins_in_secs + secs) / secs_in_1_hr * degrees
   @hours = (hrs_in_secs + mins_in_secs + secs) / secs_in_12_hrs * degrees
 
-  styles = [:roman, :numeric, :dashes, :silly]
+  styles = [:roman, :numeric, :dashes]
   erb styles.sample, :layout => :index
 end
