@@ -1,4 +1,3 @@
-html-css-clock
-==============
+## [html-css-clock](http://html-css-clock.herokuapp.com/) ##
 
-No javascript required.
+Javascript is so 2012...
