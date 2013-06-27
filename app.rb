@@ -1,5 +1,6 @@
 require "sinatra"
 require "shotgun"
+require "newrelic_rpm"
 
 get "/" do
   time = Time.now

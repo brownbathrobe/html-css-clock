@@ -17,6 +17,7 @@ GEM
       addressable (~> 2.2.6)
     mime-types (1.19)
     netrc (0.7.2)
+    newrelic_rpm (3.6.4.122)
     rack (1.4.1)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
@@ -42,6 +43,7 @@ PLATFORMS
 
 DEPENDENCIES
   heroku
+  newrelic_rpm
   rack
   rack-contrib
   shotgun
