@@ -109,3 +109,14 @@
 [06/26/13 22:44:35 -0700 Dave-Maurakiss-MacBook-Pro.local (26453)] INFO : Installing Net instrumentation
 [06/26/13 22:44:35 -0700 Dave-Maurakiss-MacBook-Pro.local (26453)] INFO : Installing Sinatra instrumentation
 [06/26/13 22:44:35 -0700 Dave-Maurakiss-MacBook-Pro.local (26453)] INFO : Finished instrumentation
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] INFO : Starting the New Relic agent in "development" environment.
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] INFO : Reading configuration from newrelic.yml
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] INFO : Disabling the Request Sampler.
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] INFO : Environment: development
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] INFO : No known dispatcher detected.
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] INFO : Application: Html-css Clock
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] WARN : Agent configured not to send data in this environment.
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] INFO : Installing Net instrumentation
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] INFO : Installing Sinatra instrumentation
+[06/26/13 22:58:37 -0700 Dave-Maurakiss-MacBook-Pro.local (28792)] INFO : Finished instrumentation
