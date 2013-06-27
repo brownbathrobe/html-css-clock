@@ -1,7 +1,9 @@
 require "sinatra"
 require "shotgun"
 require "newrelic_rpm"
-
+configure :production do
+  require 'newrelic_rpm'
+end
 get "/" do
   time = Time.now
   secs = time.sec
